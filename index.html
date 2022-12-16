@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DindeGDPS</title>
+  <meta property="og:title" content="DindeGDPS">
+  <meta name="twitter:title" content="DindeGDPS">
+  <meta name="DC.title" content="DindeGDPS - Geometry Dash Private Server">
+  <meta name="description" content="'First' GDPS to welcome Windows Phones and iOS 15 by GenericPlayR">
+  <meta property="og:description" content="'First' GDPS to welcome Windows Phones and iOS 15 by GenericPlayR">
+  <meta name="twitter:description" content="'First' GDPS to welcome Windows Phones and iOS 15 by GenericPlayR">
+  <meta name="keywords" content="gdps, geometry dash private server, dindegdps, geometry dash, gd, gmd">
+  <meta property="og:image" content="https://dgdps.ix.tc/logo.png">
+  <meta name="twitter:image" content="https://dgdps.ix.tc/logo.png">
+  <link href="stylesheet.css" rel="stylesheet">
+      <script src="dl/platform.js"></script>
+  <style>
+    body{
+background-color: #000000;
+background-size: cover;
+    color: #137575
+    }
+    #container{width:100%;}
+#left{float:left;width:300px; margin-left:20vw;}
+#right{float:right;width:300px; margin-right:20vw;}
+#center{margin:0 auto; width:300px;}
+    .collapsible {
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 50%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: darkred;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: black;
+}
+    </style>
+  <script>
+function play() {
+var audio = new Audio("1665435066.generic2k7_goofy_ahh_tone.mp3");
+audio.play();
+setTimeout(download, 500);
+}
+    function download(){
+
+    if (platform.os.family == "Windows") window.location = "https://www.dropbox.com/s/7qhh4kubm21piww/DindeGDPS.msi?dl=1";
+  
+  	if (platform.os.family == "Windows Server 2008 R2 / 7") window.location = "https://www.dropbox.com/s/7qhh4kubm21piww/DindeGDPS.msi?dl=1";
+
+    if (platform.os.family == "Windows Phone") window.location = "./WinP";
+
+    if (platform.os.family == "iOS") window.location = "./iOS";
+
+    if (platform.os.family == "Android") window.location = "https://www.dropbox.com/s/p2lom2qem3cwbub/dgdps.apk?dl=1";
+
+    }
+</script>
+</head>
+<body style="font-family: 'Open Sans'; font-weight: normal; font-style: normal;">
+  <center>
+      <img src="logo.png" height="50%" width="50%" /><br>
+      <a href="https://wbienvenue.uk.to"><img src="WB.png" height="25%" width="25%" /></a>
+      <h1>Welcome to DindeGDPS</h1>
+      <button type="button" class="collapsible">Expand News</button>
+<div class="content" style="color: red">
+      Info: We are now on <a href="https://gdpshub.com/gdps/?id=4">GDPSHub</a>. There's a discord too but only for updates...<br>
+      NEWS: DindeGDPS v3 will contain improvements to the launcher, changes to the game, bugfixes, mods added, changes to the credits mod and custom levels added... After that, the version system will change to YEAR.MONTH (2022.10)<br>
+      NEWS 2: Because a patch was made for iOS 15, the next version of DindeGDPS for iOS will use this IPA. The legacy 2.0 IPA will still be available<br>
+  	  WE ARE TESTING NEW WEB HOSTS. Nothing has to be done on your side ! If needed, you may need to update your gdps via the launcher and open CMD as administrator to run <a href="#">ipconfig /flushdns</A><br>
+      </div>        
+      <h1>What is it ?</h1>
+              <h2>It offers GD 1.9 for Windows Phone (soon on the 1.9 GDPS) and was the first GDPS to support iOS 15 by using GD 2.0 (before a patch was made)</h2>
+              <h2>It is a private server made by GenericPlayR</h2>
+              <h1 style="color: lime;">If you like this project, you can donate to the Monero address below (at the end)</h1>
+              <h2>Credits to <a href="https://gdcolon.com">GDColon</a></h2>
+              <br>
+              <div id="container">
+                                <div id="left">
+                  <a href="https://browse.dgdps.ix.tc">
+                              <img src="browse.png" alt="" />
+                              <br><img src="browse2.png" alt="" height="35%" width="35%" />
+                    </a>
+                    </div>
+                              <div id="right">
+                <a href="https://dgdps.ix.tc/database/tools"><img src="t1.png" height="50%" width="50%"><br><br><img src="t2.png" height="40%" width="40%"></a>
+                            </div>
+                                            <div id="center">
+                              <a href="#" onclick="play()"><img src="dl2.png" alt=""><br><img src="dl.png" height="50%" width="50%"/></a>
+                          </div>
+</div><br><br><br>
+    <h4>Monero: 42fqj54HjzGQJt2dpVpvEsCqRVTJGE8oXerBbePGNmdBAoC2pDnX7KQb6WF7h8cgyBEw4fomMVPdqSvLvpCGyWiPH7e5FyF</h4>
+                                </center>
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener('click', function() {
+    this.classList.toggle('active');
+    var content = this.nextElementSibling;
+    if (content.style.display === 'block') {
+      content.style.display = 'none';
+    } else {
+      content.style.display = 'block';
+    }
+  });
+}
+</script>
+</body>
+</html>
