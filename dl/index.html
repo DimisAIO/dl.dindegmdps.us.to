@@ -1,60 +1,33 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
-<head>
-
+<head id="avoidhavoc">
     <meta charset="UTF-8">
-
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Download</title>
-
-    <script src="platform.js"></script>
-
+    <title>DindeGDPS</title>
+    <script src="https://kit.fontawesome.com/b844fa90d2.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            line-height: 75px;   /* within paragraph */
+            background-color: black;
+            color: cornflowerblue;
+            font-size: 16px;
+            font-family: Arial, Helvetica, sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+    </style>
 </head>
-
 <body>
-
-    <center>
-
-        <h1>Downloading...</h1>
-
-        <h1>Javascript needs to be enabled...</h1>
-
-        <h2><a href onclick="download()">Try again...</a></h2>
-
-        <h2><a href="https://cdn.141412.xyz/DindeGDPS">Download iOS</a></h2>
-
-        <h2><a href="https://cdn.141412.xyz/DindeGDPS">Download PC</a></h2>
-
-        <h2><a href="https://cdn.141412.xyz/DindeGDPS">Download Android</a></h2>
-	<h2><a href="./WinP">Download Windows Phone</a></h2>
-
-    </center>
-
-<script>
-
-setTimeout(download, 2000);
-
-    function download(){
-
-    if (platform.os.family == "Windows") window.location = "https://cdn.141412.xyz/DindeGDPS";
-  
-  	if (platform.os.family == "Windows Server 2008 R2 / 7") window.location = "https://cdn.141412.xyz/DindeGDPS";
-
-    if (platform.os.family == "Windows Phone") window.location = "./WinP";
-
-    if (platform.os.family == "iOS") window.location = "https://cdn.141412.xyz/DindeGDPS";
-
-    if (platform.os.family == "Android") window.location = "https://cdn.141412.xyz/DindeGDPS";
-
-    }
-
-</script>
-
+    <h1>
+        <center>
+            <a href="https://dimisaio1-my.sharepoint.com/:u:/g/personal/dimisaio_141412_xyz/Ebf9dYwm9YBEjpEqgW3Y9NcBarL28cSwRXttsSxHcv2-Zg?e=wHkeTW"><i class="fa-brands fa-windows"></i>&nbsp;Windows</a>
+        <br><a href="https://install.appcenter.ms/users/daio/apps/dindegdps-1/distribution_groups/release"><i class="fa-brands fa-android"></i>&nbsp;Android</a>
+        <br><a href="https://dimisaio1-my.sharepoint.com/:u:/g/personal/dimisaio_141412_xyz/ETGcn8ZJ2RRKiQdJXpTO4UsBMmbJUx5deNfGlPoNd0O1mQ?e=LkBt2o"><i class="fa-brands fa-apple"></i>&nbsp;iOS (IPA)</a>
+        <br><a href="https://install.appcenter.ms/users/daio/apps/dindegdps/distribution_groups/public"><i class="fa-brands fa-app-store-ios"></i>&nbsp;iOS (Direct)
+        <br><a href="https://dsc.gg/dimisaio"><i class="fa-brands fa-discord"></i>&nbsp;Our Discord</a></h1>
+        </center>
 </body>
-
 </html>
