@@ -1,1 +1,0 @@
-V1 will have a DindeGDPS.old.ipa/apk/exe because it will mainly use the new servers, while the old one will be kept for archival purposes.

@@ -16,3 +16,78 @@
   font-weight: 600;
   src: local('Open Sans Semibold'), local('OpenSans-Semibold'), url(https://fonts.gstatic.com/s/opensans/v13/MTP_ySUJH_bn48VBG8sNSnhCUOGz7vYGh680lGh-uXM.woff) format('woff');
 }
+
+body{
+  font-family: 'Open Sans';
+  font-weight: normal;
+  font-style: normal;
+  background-image: url("https://files.enderman.ch/wallpapers/Bright%20Moon.jpg");
+  background-size: fill;
+  background-repeat: no-repeat;
+  color: cornflowerblue;
+  text-align: center;
+  background-color: black;
+}
+
+#logo {height: 10vw}
+
+a {
+  font-size: 2vw;
+  color: royalblue;
+}
+
+@media screen and (max-width: 600px) {
+  a {
+    font-size: 4vw;
+  }
+}
+
+#container {
+  min-width: auto;
+}
+
+n { color: white; font-size: 2em;}
+
+h1, #container {
+  background-color: black;
+  display:inline-block;
+  border:20px solid black;
+  border-radius: 20px;
+}
+
+footer { 
+position: fixed;
+bottom: 0;
+left: 0;
+right: 0;
+}
+
+.noex { font-size: 100% }
+
+m {
+  font-size: 1em;
+}
+
+.collapsible {
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 50%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: darkred;
+}
+
+.content {
+  padding: 0 18px;
+  max-width: 20%;
+  display: none;
+  overflow: hidden;
+  background-color: black;
+}
