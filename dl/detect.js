@@ -8,7 +8,7 @@ const ua = platform.os.family;
 
 if (ua.startsWith("Windows")) {
     url = win; pl = "Windows";
-} else if (ua.startsWith("Mac") || ua.startsWith("OS X")) {
+} else if (ua.toLowerCase().startsWith("os x") || ua.toLowerCase().startsWith("mac")) {
     url = mac; pl = "MacOS";
 } else if (ua == "iOS") {
     url = ios; pl = "iOS";
