@@ -8,10 +8,13 @@ const ua = platform.os.family;
 
 if (ua.startsWith("Windows")) {
     url = win; pl = "Windows";
+    document.getElementById("tip").innerHTML = "Windows 10 or newer, you can also run \"winget install dindegdps\" on CMD!";
 } else if (ua.toLowerCase().startsWith("os x") || ua.toLowerCase().startsWith("mac")) {
     url = mac; pl = "MacOS";
+    document.getElementById("tip").innerHTML = "After install, run \"sudo xattr -rd com.apple.quarantine /Applications/DindeGDPS.app/\" on the terminal";
 } else if (ua == "iOS") {
     url = ios; pl = "iOS";
+    document.getElementById("tip").innerHTML = "After install, go to Settings => General => Device Mgmt. and trust the \"Enterprise\"";
 } else if (ua == "Android") {
     url = apk; pl = "Android";
 } else {
