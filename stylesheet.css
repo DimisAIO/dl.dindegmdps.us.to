@@ -22,7 +22,7 @@ body{
   font-weight: normal;
   font-style: normal;
   background-image: url("https://files.enderman.ch/wallpapers/Bright%20Moon.jpg");
-  background-size: fill;
+  background-size: cover; /* why did I put fill */
   background-repeat: no-repeat;
   color: cornflowerblue;
   text-align: center;
