@@ -32,5 +32,5 @@ if(pl) {
 function goMac() {
     document.getElementById("dl").innerHTML = `Detected iOS`;
     document.getElementById("dlnk").href = ios;
-    document.getElementById("tip").innerHTML = "After install, run \"sudo xattr -rd com.apple.quarantine /Applications/DindeGDPS.app/\" on the terminal";
+    document.getElementById("tip").innerHTML = "After install, go to Settings => General => Device Mgmt. and trust the \"Enterprise\"";
 }
