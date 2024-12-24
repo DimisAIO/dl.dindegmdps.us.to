@@ -1,5 +1,6 @@
 let linkBuilder;
 let geode = false;
+let opn = false;
 let direct = false;
 function select(thing) {
     switch(thing) {
@@ -15,6 +16,10 @@ function select(thing) {
             break;
         default:
             if(thing < 19) return;
+            if(thing == 19) {
+                linkBuilder = linkBuilder.replace("REPL", "-19");
+                opn = true;
+            }
             if(thing == 20) linkBuilder = linkBuilder.replace("REPL", "-20");
             else if(thing == 21) linkBuilder = linkBuilder.replace("REPL", "-21");
             else {
@@ -28,7 +33,12 @@ function select(thing) {
                 directLink.href = "itms-services://?action=download-manifest&url=" + linkBuilder.replace("/sign", "/plist").replace(".ipa", ".plist");
             } else {
                 finalAndroid.style.display = "block";
-                if(geode) geodeLink.style.display = "block";
+                if(geode || opn) geodeLink.style.display = "block";
+                if(opn) {
+                    geodeLink.children[0].innerText = "Download 1.9 Server";
+                    geodeLink.href = "https://cdn-dinde.141412.xyz/apk/Server19.apk";
+                    gLink.style.display = "block";
+                }
                 location.href = linkBuilder;
             }
     }
