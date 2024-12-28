@@ -2,7 +2,7 @@ const win = "https://cdn-dinde.141412.xyz/DindeGDPS.exe";
 const apk = "https://dl.dindegmdps.us.to/mobile?platform=1";
 const ios = "https://dl.dindegmdps.us.to/mobile?platform=2";
 const idk = "https://dl.dindegmdps.us.to/dl";
-const mac = "https://dimisaio1-my.sharepoint.com/:f:/g/personal/dimisaio_141412_xyz/EqPBHhvUHVFFtbV3cd_aqlcBp-VlQtD21gT1_2NmjjFLXQ?e=hK2geU";
+const mac = "https://dimisaio1-my.sharepoint.com/:f:/g/personal/dimisaio_141412_xyz/EqPBHhvUHVFFtbV3cd_aqlcBp-VlQtD21gT1_2NmjjFLXQ?e=WWaMwj";
 let url, pl;
 const ua = platform.os.family;
 
