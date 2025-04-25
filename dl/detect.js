@@ -1,4 +1,5 @@
 const win = "https://cdn-dinde.141412.xyz/DindeGDPS.exe";
+const winp = "https://gdps.dimisaio.be/w";
 const apk = "https://dl.dindegmdps.us.to/mobile?platform=1";
 const ios = "https://dl.dindegmdps.us.to/mobile?platform=2";
 const idk = "https://dl.dindegmdps.us.to/dl";
@@ -6,7 +7,10 @@ const mac = "https://dimisaio1-my.sharepoint.com/:f:/g/personal/dimisaio_141412_
 let url, pl;
 const ua = platform.os.family;
 
-if (ua.startsWith("Windows")) {
+if(ua == "Windows Phone") {
+    url = winp; pl = "Windows Phone";
+    document.getElementById("tip").innerHTML = "Only install if you know what you're doing! (do you know what an interop unlock is?)";
+} else if (ua.startsWith("Windows")) {
     url = win; pl = "Windows";
     document.getElementById("tip").innerHTML = "Windows 10 or newer, you can also run \"winget install dindegdps\" on CMD!";
 } else if (ua.toLowerCase().startsWith("os x") || ua.toLowerCase().startsWith("mac")) {
