@@ -10,6 +10,7 @@ function select(thing) {
             else {
                 linkBuilder = "https://ios.ftp.sh/sign/DindeGDPSREPL.ipa";
                 direct = true;
+                ioshideable.style.display = "none";
             }
             platform.style.display = "none";
             version.style.display = "block";
@@ -33,11 +34,16 @@ function select(thing) {
                 directLink.href = "itms-services://?action=download-manifest&url=" + linkBuilder.replace("/sign", "/plist").replace(".ipa", ".plist");
             } else {
                 finalAndroid.style.display = "block";
-                if(geode || opn) geodeLink.style.display = "block";
-                if(opn) {
-                    geodeLink.children[0].innerText = "Download 1.9 Server";
-                    geodeLink.href = "https://cdn-dinde.141412.xyz/apk/Server19.apk";
+                if(geode || opn) {
+                    geodeLink.style.display = "block";
                     gLink.style.display = "block";
+                    if(opn) {
+                        geodeLink.children[0].innerText = "Download 1.9 Server";
+                        geodeLink.href = "https://cdn-dinde.141412.xyz/apk/Server19.apk";
+                    } else {
+                        gBtn.innerText = "Geode: Install the Modpack!";
+                        gLink.href = "https://link1.pw/dindemodpack";
+                    }
                 }
                 location.href = linkBuilder;
             }
