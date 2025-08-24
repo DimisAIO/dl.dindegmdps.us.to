@@ -3,7 +3,7 @@ const winp = "https://gdps.dimisaio.be/w";
 const apk = "https://dl.dindegmdps.us.to/mobile?platform=1";
 const ios = "https://dl.dindegmdps.us.to/mobile?platform=2";
 const idk = "https://dl.dindegmdps.us.to/dl";
-const mac = "https://dimisaio1-my.sharepoint.com/:f:/g/personal/dimisaio_141412_xyz/EqPBHhvUHVFFtbV3cd_aqlcBp-VlQtD21gT1_2NmjjFLXQ?e=WWaMwj";
+const mac = "https://rytlock.141412.xyz/share/ElT_zZll";
 let url, pl;
 const ua = platform.os.family;
 
@@ -15,7 +15,7 @@ if(ua == "Windows Phone") {
     document.getElementById("tip").innerHTML = "Windows 10 or newer, you can also run \"winget install dindegdps\" on CMD!";
 } else if (ua.toLowerCase().startsWith("os x") || ua.toLowerCase().startsWith("mac")) {
     url = mac; pl = "MacOS";
-    document.getElementById("tip").innerHTML = "After install, open the TXT file under the \"Applications shortcut\" and follow the instructions";
+    document.getElementById("tip").innerHTML = "After install, read the TXT file that was alongside the DMG files";
 } else if (ua == "iOS") {
     url = ios; pl = "iOS";
     document.getElementById("tip").innerHTML = "After install, go to Settings => General => Device Mgmt. and trust the \"Enterprise\"";
