@@ -28,6 +28,11 @@ button {
     border-color: #141412;
     border-radius: 5px;
 }
-#version, #finalAndroid, #finalIOS, #geodeLink, #platform, #gLink {
+#version, #finalAndroid, #finalIOS, #geodeLink, #geodeLink2, #platform, #gLink {
     display: none;
+}
+
+#geodes {
+    display: flex;
+    justify-content: center;
 }

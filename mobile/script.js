@@ -41,6 +41,7 @@ function select(thing) {
                         geodeLink.children[0].innerText = "Download 1.9 Server";
                         geodeLink.href = "https://cdn-dinde.141412.xyz/apk/Server19.apk";
                     } else {
+                        geodeLink2.style.display = "block";
                         gBtn.innerText = "Geode: Install the Modpack!";
                         gLink.href = "https://link1.pw/dindemodpack";
                     }
