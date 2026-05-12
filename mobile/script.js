@@ -17,21 +17,17 @@ function select(thing) {
             break;
         default:
             if(thing < 19) return;
-            if(thing == 19) {
-                linkBuilder = linkBuilder.replace("REPL", "-19");
-                opn = true;
-            }
-            if(thing == 20) linkBuilder = linkBuilder.replace("REPL", "-20");
-            else if(thing == 21) linkBuilder = linkBuilder.replace("REPL", "-21");
-            else {
+            else if(thing == 19) opn = true;
+            else if(thing > 21) {
                 linkBuilder = linkBuilder.replace("REPL", "");
                 geode = true;
-            }
+            } else linkBuilder = linkBuilder.replace("REPL", "-19");
             version.style.display = "none";
             if(direct) {
                 finalIOS.style.display = "block";
                 ipaLink.href = linkBuilder;
                 directLink.href = "itms-services://?action=download-manifest&url=" + linkBuilder.replace("/sign", "/plist").replace(".ipa", ".plist");
+                if(geode) geodeLinkDarwin.style.display = "block";
             } else {
                 finalAndroid.style.display = "block";
                 if(geode || opn) {
@@ -42,7 +38,7 @@ function select(thing) {
                         geodeLink.href = "https://cdn-dinde.141412.xyz/apk/Server19.apk";
                     } else {
                         geodeLink2.style.display = "block";
-                        gBtn.innerText = "Geode: Install the Modpack!";
+                        gBtn.innerText = "Geode: Install the Modpack! (Untested)";
                         gLink.href = "https://link1.pw/dindemodpack";
                     }
                 }

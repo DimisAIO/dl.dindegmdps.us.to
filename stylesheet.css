@@ -36,6 +36,10 @@ a {
   color: royalblue;
 }
 
+a:hover {
+  color: blue;
+}
+
 #container {
   min-width: auto;
 }
@@ -163,4 +167,12 @@ m {
   a {
     font-size: 4vw;
   }
+}
+
+#dl {
+  color: limegreen;
+}
+
+#dl:hover {
+  color: green;
 }
