@@ -18,7 +18,7 @@ function select(thing) {
         default:
             if(thing < 19) return;
             if(thing == 19) opn = true;
-            else if(thing > 21) {
+            if(thing > 21) {
                 linkBuilder = linkBuilder.replace("REPL", "");
                 geode = true;
             } else linkBuilder = linkBuilder.replace("REPL", "-" + thing);
