@@ -17,11 +17,11 @@ function select(thing) {
             break;
         default:
             if(thing < 19) return;
-            else if(thing == 19) opn = true;
+            if(thing == 19) opn = true;
             else if(thing > 21) {
                 linkBuilder = linkBuilder.replace("REPL", "");
                 geode = true;
-            } else linkBuilder = linkBuilder.replace("REPL", "-19");
+            } else linkBuilder = linkBuilder.replace("REPL", "-" + thing);
             version.style.display = "none";
             if(direct) {
                 finalIOS.style.display = "block";
