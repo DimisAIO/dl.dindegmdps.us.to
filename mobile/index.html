@@ -3,31 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Download</title>
-    <link rel="stylesheet" href="styles.css?v2">
+    <title>Download Center</title>
+    <link rel="stylesheet" href="styles.css?v3">
 </head>
 <body>
     <div id="container">
-        <div id="platform">
-            <h1>Android or iOS ?</h1>
-            <button onclick="select(1)">Android</button> <button onclick="select(2)">iOS</button>
+
+        <div class="logo-container">
+            <img src="/logo.png" alt="DindeGDPS Logo" class="logo">
         </div>
-        <div id="version">
-            <h1>Select Version:</h1>
-            <button onclick="select(19)" id="ioshideable">1.9</button> <button onclick="select(20)">2.0</button> <button onclick="select(21)">2.1</button> <button onclick="select(22)">2.2</button>
+
+        <div id="platform" class="step-view">
+            <h1>Select Your Platform</h1>
+            <div class="button-group">
+                <button onclick="select(1)">Android</button>
+                <button onclick="select(2)">iOS</button>
+            </div>
         </div>
-        <div id="finalAndroid">
-            <h2>Downloading APK!</h2>
-            <div id="geodes"><a href="https://cdn-dinde.141412.xyz/apk/Geode.apk" id="geodeLink"><button>Download Geode</button></a>&nbsp;<a href="https://cdn-dinde.141412.xyz/apk/Geode32.apk" id="geodeLink2"><button>Geode for 32-bit</button></a></div>&nbsp;<a href="https://link1.pw/19howto" id="gLink"><button id="gBtn">How to install?</button></a>
+
+        <div id="version" class="step-view">
+            <h1>Select Version</h1>
+            <div class="button-group">
+                <button onclick="select(19)" id="ioshideable">1.9</button>
+                <button onclick="select(20)">2.0</button>
+                <button onclick="select(21)">2.1</button>
+                <button onclick="select(22)">2.2</button>
+            </div>
         </div>
-        <div id="finalIOS">
+
+        <div id="finalAndroid" class="step-view">
+            <h2>Downloading APK...</h2>
+            <div class="button-group" style="margin-top: 16px;">
+                <a href="https://github.com/masckmaster2007/moddinde-android/releases/latest" id="geodeLink">
+                    <button>Download Geode</button>
+                </a>
+                <a href="https://link1.pw/19howto" id="gLink">
+                    <button id="gBtn">How to Install?</button>
+                </a>
+            </div>
+        </div>
+
+        <div id="finalIOS" class="step-view">
             <h1>Download Options</h1>
-            <a href="https://github.com/masckmaster2007/dindeode-ios/releases/latest" id="geodeLinkDarwin"><button>Geode Launcher</button></a>
-            <br>
-            <a href="" id="ipaLink"><button>IPA Download</button></a> <a href="" id="directLink"><button>Direct Install</button></a>
-            <p>Direct Install requires you to be jailbroken and have Appsync Unified installed.<br>IPA Download is much more recommended</p>
+            <div class="button-group">
+                <a href="https://github.com/masckmaster2007/dindeode-ios/releases/latest" id="geodeLinkDarwin">
+                    <button>Geode Launcher</button>
+                </a>
+                <a href="" id="ipaLink"><button>IPA Download</button></a>
+                <a href="" id="directLink"><button>Direct Install</button></a>
+            </div>
+            <p>Direct Install requires a jailbroken device with <strong>AppSync Unified</strong> installed.<br>IPA Download is strongly recommended.</p>
         </div>
     </div>
-    <script src="./script.js?v4-1"></script>
+    <script src="./script.js?v5"></script>
 </body>
 </html>

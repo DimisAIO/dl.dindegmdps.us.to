@@ -1,38 +1,143 @@
-html { height: 100%; }
+:root {
+    --bg-color: #0b0c10;
+    --card-bg: rgba(26, 29, 36, 0.75);
+    --border-color: rgba(255, 255, 255, 0.1);
+    --accent-color: #66fcf1;
+    --accent-hover: #45a29e;
+    --text-primary: #ffffff;
+    --text-secondary: #c5c6c7;
+}
 
-body {
-    color: white;
-    background-color: #141412;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-color);
+    background-image: radial-gradient(circle at 50% 0%, #1f2833 0%, var(--bg-color) 70%);
+    color: var(--text-primary);
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
-    font-family: Arial, Helvetica, sans-serif;
 }
+
 #container {
+    background: var(--card-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    
+    /* Fixed Dimensions */
+    width: 440px;            /* Fixed width for desktop/tablets */
+    max-width: 90vw;         /* Fallback so it scales on mobile screens */
+    min-height: 380px;       /* Keeps the height constant across steps */
+    padding: 32px 24px;
+    
+    /* Layout to center internal step content vertically */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    background-color: darkgray;
-    border-color: darkgray;
-    border-style: solid;
-    border-radius: 3px;
-    min-width: 75%;
-    padding: 3px;
+}
+
+h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 24px;
+    letter-spacing: -0.02em;
+}
+
+h2 {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 16px;
+    color: var(--accent-color);
+}
+
+p {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    margin-top: 16px;
+}
+
+.button-group {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 button {
-    background-color: #141412;
-    color: white;
-    font-size: 24px;
-    border-style: solid;
-    border-color: #141412;
-    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-primary);
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 12px 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    flex: 1 1 auto;
+    min-width: 120px;
 }
-#version, #finalAndroid, #finalIOS, #geodeLink, #geodeLinkDarwin, #geodeLink2, #platform, #gLink {
+
+button:hover {
+    background: var(--accent-color);
+    color: var(--bg-color);
+    border-color: var(--accent-color);
+    box-shadow: 0 0 15px rgba(102, 252, 241, 0.4);
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+a {
+    text-decoration: none;
+}
+
+.step-view {
+    display: none;
+    animation: fadeIn 0.3s ease-out forwards;
+}
+
+#version, #finalAndroid, #finalIOS, #geodeLink, #geodeLinkDarwin, #platform, #gLink {
     display: none;
 }
 
-#geodes {
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Logo Styling */
+.logo-container {
+    margin-bottom: 20px;
     display: flex;
     justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    max-width: 120px; /* Adjust size as needed */
+    height: auto;
+    object-fit: contain;
+    /* Optional: Add a glow around transparent PNG logos */
+    filter: drop-shadow(0 0 8px rgba(102, 252, 241, 0.3)); 
 }

@@ -2,6 +2,16 @@ let linkBuilder;
 let geode = false;
 let opn = false;
 let direct = false;
+
+function showElement(el, displayType = "block") {
+    el.style.display = displayType;
+    el.classList.add("step-view");
+}
+
+function hideElement(el) {
+    el.style.display = "none";
+}
+
 function select(thing) {
     switch(thing) {
         case 1:
@@ -10,10 +20,10 @@ function select(thing) {
             else {
                 linkBuilder = "https://ios.ftp.sh/sign/DindeGDPSREPL.ipa";
                 direct = true;
-                ioshideable.style.display = "none";
+                hideElement(document.getElementById("ioshideable"));
             }
-            platform.style.display = "none";
-            version.style.display = "block";
+            hideElement(document.getElementById("platform"));
+            showElement(document.getElementById("version"));
             break;
         default:
             if(thing < 19) return;
@@ -22,30 +32,32 @@ function select(thing) {
                 linkBuilder = linkBuilder.replace("REPL", "");
                 geode = true;
             } else linkBuilder = linkBuilder.replace("REPL", "-" + thing);
-            version.style.display = "none";
+            
+            hideElement(document.getElementById("version"));
+            
             if(direct) {
-                finalIOS.style.display = "block";
-                ipaLink.href = linkBuilder;
-                directLink.href = "itms-services://?action=download-manifest&url=" + linkBuilder.replace("/sign", "/plist").replace(".ipa", ".plist");
-                if(geode) geodeLinkDarwin.style.display = "block";
+                showElement(document.getElementById("finalIOS"));
+                document.getElementById("ipaLink").href = linkBuilder;
+                document.getElementById("directLink").href = "itms-services://?action=download-manifest&url=" + linkBuilder.replace("/sign", "/plist").replace(".ipa", ".plist");
+                if(geode) showElement(document.getElementById("geodeLinkDarwin"), "inline-block");
             } else {
-                finalAndroid.style.display = "block";
+                showElement(document.getElementById("finalAndroid"));
                 if(geode || opn) {
-                    geodeLink.style.display = "block";
-                    gLink.style.display = "block";
+                    showElement(document.getElementById("geodeLink"), "inline-block");
                     if(opn) {
-                        geodeLink.children[0].innerText = "Download 1.9 Server";
-                        geodeLink.href = "https://cdn-dinde.141412.xyz/apk/Server19.apk";
-                    } else {
-                        geodeLink2.style.display = "block";
-                        gBtn.innerText = "Geode: Install the Modpack! (Untested)";
-                        gLink.href = "https://link1.pw/dindemodpack";
+                        document.getElementById("geodeLink").children[0].innerText = "Download 1.9 Server";
+                        document.getElementById("geodeLink").href = "https://cdn-dinde.141412.xyz/apk/Server19.apk";
+                        showElement(document.getElementById("gLink"), "inline-block");
                     }
                 }
                 location.href = linkBuilder;
             }
     }
 }
-const autoplatform = Number(new URLSearchParams(window.location.search).get('platform'))
-if(autoplatform == 1 || autoplatform == 2) select(autoplatform);
-else platform.style.display = "block";
+
+const autoplatform = Number(new URLSearchParams(window.location.search).get('platform'));
+if(autoplatform == 1 || autoplatform == 2) {
+    select(autoplatform);
+} else {
+    showElement(document.getElementById("platform"));
+}
