@@ -20,7 +20,7 @@ function updatePhrase() {
     // Fade out text
     textEl.classList.add("fade-out");
     
-    setTimeout(() => {
+    setTimeout(function() {
         textEl.innerHTML = phr[x];
         textEl.classList.remove("fade-out"); // Fade in text
         x = (x + 1) % phr.length;
